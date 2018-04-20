@@ -1,0 +1,9 @@
+bower_components
+build
+coverage
+dist
+docs
+src5
+node_modules
+npm-debug.log
+**/.DS_*

@@ -1,0 +1,50 @@
+{
+  "name": "eatsjobs-utils",
+  "version": "1.2.8",
+  "description": "set of utilities function",
+  "main": "dist/eatsjobs-utils.js",
+  "jsnext:main": "src/main.js",
+  "module": "src5/main.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "transpile": "babel src --out-dir src5",
+    "build": "NODE_ENV=production npm run clean && webpack --mode=development",
+    "clean": "rimraf dist build docs src5",
+    "lint": "eslint src",
+    "lec": "./node_modules/lec/cmd-runner.js -d -r docs/",
+    "preversion": "npm run test",
+    "version": "npm run build && npm run transpile",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "es6",
+    "babel",
+    "webpack",
+    "jasmine",
+    "karma",
+    "istanbul",
+    "http",
+    "client"
+  ],
+  "author": "Pasquale Mangialavori",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "browserslist": "last 2 versions, ie 10",
+  "dependencies": {}
+}
